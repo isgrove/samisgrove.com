@@ -24,6 +24,8 @@ body {
   width: 640px;
   max-width: 90%;
   margin: auto;
+  font-size: 16px;
+  line-height: 1.2;
 }
 
 a {
@@ -43,15 +45,19 @@ section.about {
   }
 }
 
+footer {
+  padding: 1rem 0;
+}
+
 section.webring {
   border: solid 1px var(--border-webring);
   color: var(--text-webring);
   padding: 0.5rem 1rem;
   text-align: center;
-}
 
-footer {
-  padding: 1rem 0;
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
 }
 
 section.webring-picker {
@@ -83,4 +89,12 @@ section.webring a:hover {
   margin-top: 1rem;
   font-size: 0.8rem;
   opacity: 0.8;
+}
+
+a.favicon img {
+  vertical-align: top;
+  padding-left: 0.1rem;
+  padding-right: 0.2rem;
+  width: 16px;
+  height: 16px;
 }

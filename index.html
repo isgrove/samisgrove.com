@@ -19,14 +19,14 @@
 				<li>
 					<p>
 						Software Engineer at
-						<a href="https://api-docs.monoova.com/">Monoova</a>
+						<a class="favicon" href="https://api-docs.monoova.com/">Monoova</a>
 						(Sydney, NSW)
 					</p>
 				</li>
 				<li>
 					<p>
 						Founding Father at
-						<a href="https://matchamonday.net/">Matcha Monday</a>
+						<a class="favicon" href="https://matchamonday.net/">Matcha Monday</a>
 						(Sydney, NSW)
 					</p>
 				</li>
@@ -38,7 +38,7 @@
 				<li>
 					<p>
 						Software Engineer at
-						<a href="https://www.dekkosecure.com/security/">Dekko Secure</a>
+						<a class="favicon" href="https://www.dekkosecure.com/security/">Dekko Secure</a>
 						(Sydney, NSW)
 					</p>
 				</li>
@@ -65,6 +65,17 @@
 
 <script>
 	document.getElementById('year').textContent = new Date().getFullYear();
+
+	document.addEventListener('DOMContentLoaded', () => {
+		const allAnchors = document.querySelectorAll('a.favicon');
+
+		for (const anchor of allAnchors) {
+			const favicon = document.createElement('img');
+			// TODO: replace google static with something else
+			favicon.src = `https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&size=16&url=${anchor.href}`;
+			anchor.insertBefore(favicon, anchor.firstChild);
+		}
+	});
 </script>
 
 <script type="module">
