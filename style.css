@@ -21,7 +21,7 @@
 body {
   background: var(--bg-primary);
   color: var(--text-primary);
-  width: 720px;
+  width: 640px;
   max-width: 90%;
   margin: auto;
 }
@@ -34,15 +34,20 @@ section.about {
 
 section.webring {
   border: solid 1px var(--webring-border);
-  width: fit-content;
   color: var(--webring-text);
   padding: 0.5rem 1rem;
+  text-align: center;
+}
+
+footer {
+  padding: 1rem 0;
 }
 
 section.webring-picker {
   display: flex;
   gap: 1rem;
   align-items: center;
+  justify-content: center;
 }
 
 section.webring-picker .divider {
@@ -60,4 +65,11 @@ section.webring a {
 section.webring a:hover {
   color: var(--link-color);
   text-decoration: underline;
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  opacity: 0.8;
 }

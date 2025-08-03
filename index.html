@@ -58,8 +58,13 @@
 				<span id="next"><i>Loading...</i></span>
 			</section>
 		</section>
+		<p class="copyright">© 2002-<span id="year">2025</span> Sam Isgrove</p>
 	</footer>
 </body>
+
+<script>
+	document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 
 <script type="module">
 	import {getRingNeighbors} from 'https://cdn.jsdelivr.net/gh/matchamonday/matchamonday.net@latest/webring.mjs';
