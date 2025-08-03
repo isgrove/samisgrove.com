@@ -1,20 +1,20 @@
 :root {
   /* Light mode colors */
   --bg-primary: #ffffff;
-  --text-primary: #1B1F23;
-  --webring-border: #2f4f2f;
-  --webring-text: #2f4f2f;
-  --link-color: #228B22;
+  --text-primary: #1b1f23;
+  --text-accent: #0049c6;
+  --text-webring: #228b22;
+  --border-webring: #d9e5c9;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     /* Dark mode colors */
-    --bg-primary: #1B1F23;
-    --text-primary: #fff;
-    --webring-border: #d9e5c9;
-    --webring-text: #d9e5c9;
-    --link-color: #8FBC8F;
+    --bg-primary: #1b1f23;
+    --text-primary: #ffffff;
+    --text-webring: #d9e5c9;
+    --text-accent: #4a9eff;
+    --border-webring: #2f4f2f;
   }
 }
 
@@ -26,6 +26,17 @@ body {
   margin: auto;
 }
 
+a {
+  color: var(--text-accent);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--text-accent);
+  text-decoration: underline;
+}
+
+
 section.about {
   h1 {
     font-size: 1.75rem;
@@ -33,8 +44,8 @@ section.about {
 }
 
 section.webring {
-  border: solid 1px var(--webring-border);
-  color: var(--webring-text);
+  border: solid 1px var(--border-webring);
+  color: var(--text-webring);
   padding: 0.5rem 1rem;
   text-align: center;
 }
@@ -53,17 +64,17 @@ section.webring-picker {
 section.webring-picker .divider {
   width: 1px;
   height: 1rem;
-  background-color: var(--webring-border);
+  background-color: var(--border-webring);
   flex-shrink: 0;
 }
 
 section.webring a {
-  color: var(--link-color);
+  color: var(--text-webring);
   text-decoration: none;
 }
 
 section.webring a:hover {
-  color: var(--link-color);
+  color: var(--text-webring);
   text-decoration: underline;
 }
 
