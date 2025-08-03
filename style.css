@@ -1,0 +1,63 @@
+:root {
+  /* Light mode colors */
+  --bg-primary: #ffffff;
+  --text-primary: #1B1F23;
+  --webring-border: #2f4f2f;
+  --webring-text: #2f4f2f;
+  --link-color: #228B22;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Dark mode colors */
+    --bg-primary: #1B1F23;
+    --text-primary: #fff;
+    --webring-border: #d9e5c9;
+    --webring-text: #d9e5c9;
+    --link-color: #8FBC8F;
+  }
+}
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  width: 720px;
+  max-width: 90%;
+  margin: auto;
+}
+
+section.about {
+  h1 {
+    font-size: 1.75rem;
+  }
+}
+
+section.webring {
+  border: solid 1px var(--webring-border);
+  width: fit-content;
+  color: var(--webring-text);
+  padding: 0.5rem 1rem;
+}
+
+section.webring-picker {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+section.webring-picker .divider {
+  width: 1px;
+  height: 1rem;
+  background-color: var(--webring-border);
+  flex-shrink: 0;
+}
+
+section.webring a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+section.webring a:hover {
+  color: var(--link-color);
+  text-decoration: underline;
+}

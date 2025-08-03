@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sam Isgrove</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<main>
+		<section class="about">
+			<h1>Sam Isgrove</h1>
+			<p>
+				Current:
+			<ul>
+				<li>
+					<p>
+						Software Engineer @
+						<a href="https://api-docs.monoova.com/">Monoova</a>
+						(Sydney, NSW)
+					</p>
+				</li>
+				<li>
+					<p>
+						Founding Father @
+						<a href="https://matchamonday.net/">Matcha Monday</a>
+						(Sydney, NSW)
+					</p>
+				</li>
+			</ul>
+			</p>
+			<p>
+				Previous:
+			<ul>
+				<li>
+					<p>
+						Software Engineer @
+						<a href="https://www.dekkosecure.com/security/">Dekko Secure</a>
+						(Sydney, NSW)
+					</p>
+				</li>
+			</ul>
+			</p>
+		</section>
+	</main>
+
+	<footer>
+		<section class="webring">
+			<section class="webring-info">
+				<a class="webring-index" href="https://matchamonday.net">Matcha Monday Webring</a>
+			</section>
+
+			<section class="webring-picker">
+				<span id="previous"><i>Loading...</i></span>
+				<div class="divider"></div>
+				<span id="next"><i>Loading...</i></span>
+			</section>
+		</section>
+	</footer>
+</body>
+
+<script type="module">
+	import {getRingNeighbors} from 'https://cdn.jsdelivr.net/gh/matchamonday/matchamonday.net@latest/webring.mjs';
+	const neighbors = getRingNeighbors("https://maxbo.me");
+	const previous = document.getElementById('previous');
+	const next = document.getElementById('next');
+	previous.innerHTML = `<a href="${neighbors.previous.url}">← ${neighbors.previous.name}</a>`
+	next.innerHTML = `<a href="${neighbors.next.url}">${neighbors.next.name} →</a>`
+</script>
+
+</html>
